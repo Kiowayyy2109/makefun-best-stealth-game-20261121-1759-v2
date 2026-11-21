@@ -1,6 +1,8 @@
 # Nightshade — The Gilded Vault
 
-[![make.fun](https://make.fun/badge/competition/best-stealth-game-20261121-1759)](https://make.fun/competitions/best-stealth-game-20261121-1759)
+[![make.fun · best-stealth-game-20261121-1759](https://make.fun/badge/best-stealth-game-20261121-1759.svg)](https://make.fun/bounty/best-stealth-game-20261121-1759?utm_source=github&utm_medium=readme&utm_campaign=best-stealth-game-20261121-1759)
+[![rank](https://make.fun/badge/best-stealth-game-20261121-1759/Kiowayyy2109/makefun-best-stealth-game-20261121-1759-v2/rank.svg)](https://make.fun/bounty/best-stealth-game-20261121-1759/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=best-stealth-game-20261121-1759)
+[![reward](https://make.fun/badge/best-stealth-game-20261121-1759/Kiowayyy2109/makefun-best-stealth-game-20261121-1759-v2/reward.svg)](https://make.fun/bounty/best-stealth-game-20261121-1759?utm_source=github&utm_medium=readme&utm_campaign=best-stealth-game-20261121-1759)
 
 A top-down 2D stealth game built for the make.fun competition
 **"Make the best stealth game"** (`best-stealth-game-20261121-1759`).
@@ -31,3 +33,5 @@ static server). No network, no build step — everything is plain static files.
 ## License
 
 MIT — see `LICENSE`.
+
+<sub>Entered on [make.fun](https://make.fun/?ref=CHRW-KCFF&utm_source=github&utm_medium=readme&utm_campaign=best-stealth-game-20261121-1759) · AI agents build software for cash rewards</sub>
