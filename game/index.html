@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nightshade — The Gilded Vault</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #070a16; }
+  #wrap { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: radial-gradient(1200px 700px at 50% 40%, #101736 0%, #070a16 70%); }
+  #game { display: block; touch-action: none; box-shadow: 0 0 60px rgba(0,0,0,.8), 0 0 0 1px #2a3358; }
+  #status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="game" width="1280" height="720" aria-label="Nightshade — The Gilded Vault: a top-down stealth game. Sneak past guards, steal the relics, reach the exit unseen."></canvas></div>
+<p id="status" role="status" aria-live="polite"></p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+// Nightshade — The Gilded Vault: level data.
+// Four hand-built museum/vault floors. Each map is 32 x 16 tiles of 40px.
+// Legend: # wall | . marble | , carpet | ~ shadow pool | C crate | D desk
+// B bookshelf | P plant | S statue | L lamp | R relic | E exit | T player
+// G guard spawn | V camera | = laser tripwire row.
+
+export const TILE = 40;
+export const COLS = 32;
+export const ROWS = 16;
+export const HUD_H = 80;
+
+export const LEVELS = [
+  {
+    name: 'Level 1 — The Marble Gallery',
+    short: 'The Marble Gallery',
+    brief: 'Two patrollers guard the gallery. Slip through the shadows, steal all three relics, and reach the exit unseen.',
+    map: [
+      '################################',
+      '#T.....~~......L......R........#',
+      '#......~~....C...........P.....#',
+      '#..,,,,,,....D......C..........#',
+      '#..,,,,,,...........B..........#',
+      '#..,,,,,,....~~~~~......R......#',
+      '#......C.....~~~~~....D........#',
+      '#..D..........~~~~~....C.......#',
+      '#...........C......P...........#',
+      '#..P....C......~~~~~.....L.....#',
+      '#.............~~~~~............#',
+      '#..C.......D......C......G.....#',
+      '#......~~......................#',
+      '#..R...~~.....S.......C....E...#',
+      '#......~~..........L...........#',
+      '################################',
+    ],
+    guards: [
+      { path: [[5, 2], [20, 2], [20, 6], [5, 6]], speed: 52 },
+      { path: [[10, 13], [26, 13], [26, 9], [10, 9]], speed: 58 },
+    ],
+    cameras: [],
+    hint: 'Stay in the dark. Lamps light you up — shadows slow their eyes.',
+  },
+  {
+    name: 'Level 2 — The Vault Antechamber',
+    short: 'The Vault Antechamber',
+    brief: 'Three patrollers and a stationary sentry watch the antechamber. Time your moves between their gazes.',
+    map: [
+      '################################',
+      '#T....L......,,,,,,......R.....#',
+      '#..........,,,,,,,,....C.......#',
+      '#..C.......,,,,,,....D.........#',
+      '#......P...........~~~~~.......#',
+      '#..D......C.......~~~~~..B.....#',
+      '#.............D...~~~~~........#',
+      '#..~~~~~.....####..........P...#',
+      '#..~~~~~.....#..#....C.........#',
+      '#..~~~~~.....#..#..D......R....#',
+      '#.......C....#..#..............#',
+      '#..B......P..####....~~~~~.....#',
+      '#...................~~~~~.G....#',
+      '#..R....L......C....~~~~~......#',
+      '#..........D.........L.....E...#',
+      '################################',
+    ],
+    guards: [
+      { path: [[4, 3], [16, 3], [16, 7], [4, 7]], speed: 60 },
+      { path: [[24, 2], [28, 2], [28, 8], [24, 8]], speed: 56 },
+      { path: [[8, 12], [20, 12], [20, 14], [8, 14]], speed: 62 },
+      { path: [[16, 10]], speed: 0, sentry: true },
+    ],
+    cameras: [],
+    hint: 'The sentry never walks — but he turns. Watch his cone sweep.',
+  },
+  {
+    name: 'Level 3 — The Grand Hall',
+    short: 'The Grand Hall',
+    brief: 'Security cameras sweep the grand hall. Their cones are just as deadly as a guard’s — time the sweeps.',
+    map: [
+      '################################',
+      '#T.....~~.....L......,,,,,,....#',
+      '#......~~..........,,,,,,,,..R.#',
+      '#..C...~~....D.....,,,,,,,.....#',
+      '#...........C..............V...#',
+      '#..~~~~~........S......P...C...#',
+      '#..~~~~~...D.........~~~~~.....#',
+      '#..~~~~~...........~~~~~..D....#',
+      '#...V..P.....C.....~~~~~.......#',
+      '#..D.........####..............#',
+      '#...........#..#....C.....R....#',
+      '#..C........#..#..P............#',
+      '#......~~...####......~~~~~....#',
+      '#..R...~~..........L..~~~~~....#',
+      '#......~~.....D.......~~~~~E...#',
+      '################################',
+    ],
+    guards: [
+      { path: [[4, 2], [14, 2], [14, 6], [4, 6]], speed: 64 },
+      { path: [[18, 10], [28, 10], [28, 13], [18, 13]], speed: 60 },
+      { path: [[24, 3], [24, 8], [14, 8], [14, 3]], speed: 66 },
+    ],
+    cameras: [
+      { base: Math.PI / 2, sweep: 1.1, speed: 0.55 },
+      { base: -Math.PI / 2, sweep: 1.0, speed: 0.45 },
+    ],
+    hint: 'Cameras never blink. Slip past while their cone sweeps away.',
+  },
+  {
+    name: 'Level 4 — The Inner Vault',
+    short: 'The Inner Vault',
+    brief: 'The inner vault: four patrollers, cameras, and laser tripwires blinking across the corridors. One clean run.',
+    map: [
+      '################################',
+      '#T....L......,,,,,,.....R......#',
+      '#..........,,,,,,,,....C.......#',
+      '#..C.......,,,,,,.....D........#',
+      '#============================..#',
+      '#..D......C......~~~~~....P....#',
+      '#.............D..~~~~~....C....#',
+      '#..~V~~~..........~~~~~....V...#',
+      '#..~~~~~....S...........D......#',
+      '#..~~~~~....C....P......R......#',
+      '#============================..#',
+      '#..B......P.....~~~~~.....C....#',
+      '#................~~~~~.........#',
+      '#..R....L......D..~~~~~....E...#',
+      '#..........C.........L.........#',
+      '################################',
+    ],
+    guards: [
+      { path: [[4, 2], [16, 2], [16, 5], [4, 5]], speed: 68 },
+      { path: [[20, 5], [28, 5], [28, 8], [20, 8]], speed: 64 },
+      { path: [[6, 12], [16, 12], [16, 14], [6, 14]], speed: 70 },
+      { path: [[22, 12], [22, 14], [28, 14], [28, 12]], speed: 66 },
+    ],
+    cameras: [
+      { base: Math.PI / 2, sweep: 1.0, speed: 0.6 },
+      { base: -Math.PI / 2, sweep: 1.2, speed: 0.5 },
+    ],
+    hint: 'Lasers blink on and off. Cross only in the dark gap — or not at all.',
+  },
+];
